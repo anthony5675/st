@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "xos4 Terminus:pixelsize=16:antialias=false";
 static int borderpx = 2;
 
 /*
@@ -25,7 +25,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
-static float chscale = 1.0;
+static float chscale = 1.2;
 
 /*
  * word delimiter string
@@ -96,42 +96,50 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+    //"#11151c",
+    //"#d26937",
+    //"#2aa889",
+    //"#edb443",
+    //"#195466",
+    //"#888ca6",
+    //"#33859e",
+    //"#4e5166",
+    //"#0c1014",
+    //"#d26937",
+    //"#75a9b5",
+    //"#b58900",
+    //"#245361",
+    //"#599cab",
+    //"#99d1ce",
+    //"#d3ebe9",
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+    "#323438",
+    "#c23127",
+    "#2aa889",
+    "#edb443",
+    "#195466",
+    "#85678f",
+    "#33859e",
+    "#99d1ce",
+    "#0c1014",
+    "#d26937",
+    "#22434d",
+    "#255361",
+    "#306676",
+    "#4e5166",
+    "#599cab",
+    "#d3ebe9",
+    [255] = 0
 };
-
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultbg = 8;
+static unsigned int defaultcs = 14;
+static unsigned int defaultrcs = 12;
 
 /*
  * Default shape of cursor
